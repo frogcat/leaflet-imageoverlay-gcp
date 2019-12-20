@@ -5,10 +5,10 @@
       opacity: 1.0,
       interactive: true
     },
-    initialize: function(imageUrl, groundControlPoints, options) {
-      L.Util.setOptions(this, options);
-      this.setImageUrl(imageUrl);
+    initialize: function(url, groundControlPoints, options) {
+      this.setUrl(url);
       this.setGroundControlPoints(groundControlPoints);
+      L.Util.setOptions(this, options);
     },
     setOpacity: function(opacity) {
       if (this._canvas) {
@@ -20,7 +20,7 @@
       this.groundControlPoints = groundControlPoints;
       this.paint();
     },
-    setImageUrl: function(imageUrl) {
+    setUrl: function(url) {
       var that = this;
       delete that._image;
       var image = new Image();
@@ -29,7 +29,7 @@
         that._image = image;
         that._resize();
       };
-      image.src = imageUrl;
+      image.src = url;
     },
     getEvents: function() {
       return {
@@ -90,8 +90,8 @@
     }
   });
 
-  L.imageOverlay.gcp = function(imageUrl, groundControlPoints, options) {
-    return new L.ImageOverlay.GCP(imageUrl, groundControlPoints, options);
+  L.imageOverlay.gcp = function(url, groundControlPoints, options) {
+    return new L.ImageOverlay.GCP(url, groundControlPoints, options);
   };
 
 })();
