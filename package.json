@@ -1,0 +1,34 @@
+{
+  "name": "leaflet-imageoverlay-gcp",
+  "version": "1.0.0",
+  "description": "A Leaflet plugin to overlay image with ground control points",
+  "main": "leaflet-imageoverlay-gcp.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frogcat/leaflet-imageoverlay-gcp.git"
+  },
+  "keywords": [
+    "leaflet"
+  ],
+  "author": "frogcat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frogcat/leaflet-imageoverlay-gcp/issues"
+  },
+  "homepage": "https://github.com/frogcat/leaflet-imageoverlay-gcp#readme",
+  "dependencies": {
+    "canvas-morph": "github:frogcat/canvas-morph"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.1",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^1.31.0"
+  }
+}

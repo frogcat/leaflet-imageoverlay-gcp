@@ -1,4 +1,4 @@
-(function() {
+export default function(L) {
 
   L.ImageOverlay.GCP = L.Layer.extend({
     options: {
@@ -105,4 +105,4 @@
     return new L.ImageOverlay.GCP(url, groundControlPoints, options);
   };
 
-})();
+}

@@ -9,7 +9,7 @@
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet-hash@0.2.1/leaflet-hash.js"></script>
   <script src="https://frogcat.github.io/canvas-morph/canvas-morph.js"></script>
-  <script src="../leaflet-imageoverlay-gcp.js"></script>
+  <script src="leaflet-imageoverlay-gcp.js"></script>
 </head>
 
 <body>
@@ -64,6 +64,18 @@
       imagePoint: L.point(0, 1460),
       draggable: true
     }).addTo(markerGroup);
+
+    layer.on("click", function(e) {
+      var p = layer.containerPointToImagePoint(e.containerPoint);
+      if (p) {
+        L.marker(e.latlng, {
+          imagePoint: p,
+          draggable: true
+        }).on("dblclick", function() {
+          markerGroup.removeLayer(this);
+        }).addTo(markerGroup);
+      }
+    });
   </script>
 </body>
 
