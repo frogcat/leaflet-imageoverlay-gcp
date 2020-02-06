@@ -504,7 +504,7 @@
         return p[1];
     }
 
-    function canvasMorph(HTMLCanvasElement) {
+    (function(HTMLCanvasElement) {
 
       // 3x3 行列の掛け算
       function multiply(a, b) {
@@ -669,9 +669,9 @@
           }
         };
       };
-    }
+    })(window.HTMLCanvasElement);
 
-    function leafletImageoverlayGCP(L) {
+    (function(L) {
 
       L.ImageOverlay.GCP = L.Layer.extend({
         options: {
@@ -778,9 +778,6 @@
         return new L.ImageOverlay.GCP(url, groundControlPoints, options);
       };
 
-    }
-
-    canvasMorph(HTMLCanvasElement);
-    leafletImageoverlayGCP(L);
+    })(window.L);
 
 }());
