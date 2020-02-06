@@ -1,4 +1,6 @@
-export default function(L) {
+import 'canvas-morph';
+
+(function(L) {
 
   L.ImageOverlay.GCP = L.Layer.extend({
     options: {
@@ -105,4 +107,4 @@ export default function(L) {
     return new L.ImageOverlay.GCP(url, groundControlPoints, options);
   };
 
-}
+})(window.L);
