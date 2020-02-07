@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A Leaflet plugin to overlay image with ground control points",
   "main": "leaflet-imageoverlay-gcp.js",
-  "directories": {
-    "example": "example"
-  },
+  "files": [
+    "dist/leaflet-imageoverlay-gcp.js",
+    "dist/leaflet-imageoverlay-gcp.min.js"
+  ],
   "scripts": {
     "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +25,8 @@
   },
   "homepage": "https://github.com/frogcat/leaflet-imageoverlay-gcp#readme",
   "dependencies": {
-    "canvas-morph": "github:frogcat/canvas-morph"
+    "canvas-morph": "github:frogcat/canvas-morph",
+    "rollup-plugin-terser": "^5.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.1",
